@@ -24,4 +24,54 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/yellow_100_dark</item>
     </style>
+
+    <style name="Theme.Quiz.Third" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/cyan_100</item>
+        <item name="colorPrimaryDark">@color/cyan_100</item>
+        <item name="colorPrimaryVariant">@color/cyan_100</item>
+        <item name="colorSecondary">@color/cyan_100</item>
+        <item name="colorSecondaryVariant">@color/cyan_100</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/cyan_100</item>
+    </style>
+
+    <style name="Theme.Quiz.Fourth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorSecondary">@color/yellow</item>
+        <item name="colorSecondaryVariant">@color/yellow</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/yellow</item>
+    </style>
+
+    <style name="Theme.Quiz.Fifth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/light_green</item>
+        <item name="colorPrimaryDark">@color/light_green</item>
+        <item name="colorPrimaryVariant">@color/light_green</item>
+        <item name="colorSecondary">@color/light_green</item>
+        <item name="colorSecondaryVariant">@color/light_green</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/light_green</item>
+    </style>
+
+    <style name="Theme.Quiz.Sixth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/peach</item>
+        <item name="colorPrimaryDark">@color/peach</item>
+        <item name="colorPrimaryVariant">@color/peach</item>
+        <item name="colorSecondary">@color/peach</item>
+        <item name="colorSecondaryVariant">@color/peach</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/peach</item>
+    </style>
+
+    <style name="Theme.Quiz.Seventh" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryDark">@color/pink</item>
+        <item name="colorPrimaryVariant">@color/pink</item>
+        <item name="colorSecondary">@color/pink</item>
+        <item name="colorSecondaryVariant">@color/pink</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/pink</item>
+    </style>
 </resources>
