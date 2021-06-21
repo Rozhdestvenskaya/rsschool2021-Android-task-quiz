@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), Navigator, AppInterraptor, ShareResult
     }
 
     private fun openResultScreen(){
-        val resultFragment = ResultFragment.createInstance(questions.size, culculateCorrectAnswers())
+        val resultFragment = ResultFragment.createInstance(questions.size, calculateCorrectAnswers())
         supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, resultFragment)
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), Navigator, AppInterraptor, ShareResult
     }
 
     private fun buildReport() : String {
-        var report = getString(R.string.result, culculateCorrectAnswers(), questions.size)
+        var report = getString(R.string.result, calculateCorrectAnswers(), questions.size)
         for(i in questions.indices) {
             report += "\n\n${i +  1}) ${questions[i].question}\nYour answer - ${questions[i].options[answers[i]]}"
         }
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity(), Navigator, AppInterraptor, ShareResult
         answers.put(index, answer)
     }
 
-    fun culculateCorrectAnswers(): Int{
+    private fun calculateCorrectAnswers(): Int{
         var count = 0
         for (i in questions.indices){
             if (questions[i].correct == answers[i]) count++
