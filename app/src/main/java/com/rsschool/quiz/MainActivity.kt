@@ -67,7 +67,6 @@ class MainActivity : AppCompatActivity(), Navigator, AppInterraptor, ShareResult
 
     override fun movePrev() {
         onBackPressed()
-        currentQuestion--
     }
 
     override fun moveStart() {
@@ -91,6 +90,15 @@ class MainActivity : AppCompatActivity(), Navigator, AppInterraptor, ShareResult
 
     override fun onAnswerChecked(index: Int, answer: Int) {
         answers.put(index, answer)
+    }
+
+    override fun onBackPressed() {
+        if (currentQuestion == 0) {
+            exit()
+            return
+        }
+        if (currentQuestion > 0) currentQuestion--
+        super.onBackPressed()
     }
 
     private fun calculateCorrectAnswers(): Int{

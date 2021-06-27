@@ -1,17 +1,20 @@
 package com.rsschool.quiz
 
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ContextThemeWrapper
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import com.rsschool.quiz.databinding.FragmentQuizBinding
+
 
 class QuizFragment : Fragment() {
     private var _binding: FragmentQuizBinding? = null
@@ -28,6 +31,8 @@ class QuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val contextThemeWrapper = theme?.let { ContextThemeWrapper(activity, it) }
+
+        contextThemeWrapper?.theme?.let { updateStatusBarTheme(it) }
 
         _binding = FragmentQuizBinding.inflate(inflater.cloneInContext(contextThemeWrapper),
             container, false)
@@ -78,6 +83,15 @@ class QuizFragment : Fragment() {
         }
 
         return view
+    }
+
+    private fun updateStatusBarTheme(theme: Resources.Theme) {
+        //получаем цвет из ресурсов
+        val typedValue = TypedValue()
+        theme.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true)
+        val color: Int = ContextCompat.getColor(requireContext(), typedValue.resourceId)
+
+        activity?.window?.statusBarColor = color
     }
 
     override fun onDestroyView() {

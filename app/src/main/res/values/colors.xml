@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="light_blue">#73BBDC</color>
-    <color name="peach">#FB7B72</color>
-    <color name="light_green">#99F49D</color>
-    <color name="yellow">#F4E030</color>
-    <color name="pink">#CF50E4</color>
+    <color name="light_peach_100">#F69F99</color>
+    <color name="light_peach_light">#F6C1BE</color>
+    <color name="light_peach_dark">#AE7470</color>
+    <color name="pink_100">#CA75D8</color>
+    <color name="pink_light">#DFA0EA</color>
+    <color name="pink_dark">#975AA1</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="deep_orange_100">#ffccbc</color>
