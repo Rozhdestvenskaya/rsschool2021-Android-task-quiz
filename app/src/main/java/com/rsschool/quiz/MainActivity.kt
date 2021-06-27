@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity(), Navigator, AppInterraptor, ShareResult
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
         intent.putExtra(Intent.EXTRA_TEXT, result)
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Quiz results")
         if (intent.resolveActivity(pm) != null) startActivity(intent)
     }
 
